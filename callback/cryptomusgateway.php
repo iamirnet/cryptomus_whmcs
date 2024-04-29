@@ -59,7 +59,7 @@ if ($success) {
             }
         }
     }
-    
+
     if (isset($gatewayParams["convertto"]) && 0 < strlen($gatewayParams["convertto"])) {
         $data = WHMCS\Database\Capsule::table("tblinvoices")->where("id", $invoiceId)->first(array("userid", "total"));
         $total = $data->total;
