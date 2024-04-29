@@ -1,0 +1,8 @@
+{
+    "require": {
+        "cryptomus/api-php-sdk": "^1.0",
+      "ext-json": "*",
+      "ext-bcmath": "*",
+      "ext-mbstring": "*"
+    }
+}

@@ -1,0 +1,26 @@
+{
+  "schema": "1.1",
+  "type": "whmcs-gateways",
+  "name": "cryptomusgateway",
+  "license": "proprietary",
+  "category": "payments",
+  "description": {
+    "name": "Cryptomus",
+    "tagline": "Start accepting crypto payments via Cryptomus.com",
+    "long": "Receive crypto payments on your online store. Cryptomus makes it easy for ecommerce websites to accept Bitcoin, Ethereum and other cryptocurrency on their website with one click."
+  },
+  "logo": {
+    "filename": "logo.png"
+  },
+  "support": {
+    "homepage": "https:\/\/www.cryptomus.com\/",
+    "support_url": "https:\/\/t.me/cryptomus_com\/",
+    "docs_url": "https:\/\/doc.cryptomus.com\/sdks-and-modules\/modules"
+  },
+  "authors": [
+    {
+      "name": "Cryptomus.com",
+      "homepage": "https:\/\/www.cryptomus.com\/"
+    }
+  ]
+}
