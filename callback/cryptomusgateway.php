@@ -59,6 +59,18 @@ if ($success) {
             }
         }
     }
+    
+    if (isset($gatewayParams["convertto"]) && 0 < strlen($gatewayParams["convertto"])) {
+        $data = WHMCS\Database\Capsule::table("tblinvoices")->where("id", $invoiceId)->first(array("userid", "total"));
+        $total = $data->total;
+        $currencyArr = getCurrency($data->userid);
+        $paymentAmount = convertCurrency($paymentAmount, $gatewayParams["convertto"], $currencyArr["id"]);
+        $roundAmt = round($paymentAmount, 1);
+        $roundTotal = round($total, 1);
+        if ($roundAmt == $roundTotal) {
+            $paymentAmount = $total;
+        }
+    }
 
     addInvoicePayment(
         $invoiceId,
